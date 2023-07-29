@@ -1,0 +1,166 @@
+{
+      "name": "MeiRobot",
+      "description": "An Anime themed Telegram group management bot.",
+      "logo": "https://telegra.ph/file/9dfcdab5244a61b323210.jpg", 
+      "keywords": [
+         "telegram",
+         "anime",
+         "group",
+         "manager",
+         "Mei"
+      ],   
+   "repository": "https://github.com/ArshCypherZ/HWBot",
+   "formation": {
+        "worker": {
+          "quantity": 1,
+          "size": "eco"
+        }
+   },
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "env": {
+      "TOKEN": {
+         "description": "Your bot token. Can be obtained from https://telegram.dog/BotFather/",
+         "required": true,
+         "value": ""
+      },
+      "ENV": {
+         "description": "Do not change if deploying on heroku.",
+         "required": true,
+         "value": "True"
+      },
+      "API_ID": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },
+      "API_HASH": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },
+      "DATABASE_URL": {
+         "description": "Your Postgres SQL DataBase URI, Get one from ElephantSQL.com",
+         "required": true,
+         "value": ""
+      }, 
+      "REDIS_URL": {
+         "description": "Your Redis URL, Get one from redislabs.com",
+         "required": true,
+         "value": ""
+      }, 
+     "REM_BG_API_KEY": {
+         "description": "From:- https://www.remove.bg/",
+         "required": false,
+         "value": ""
+      }, 
+      "OWNER_ID": {
+         "description": "Your Telegram User ID as an integer.",
+         "required": true,
+         "value": ""
+      },
+      "BOT_NAME": {
+         "description": "Your Telegram Bot Name.",
+         "required": true,
+         "value": ""
+      },
+      "BOT_USERNAME": {
+         "description": "Your Telegram Bot UserName without @",
+         "required": true,
+         "value": ""
+      },
+      "SUPPORT_CHAT": {
+         "description": "The Telegram Support Group Where Users of your Bot can Go and ask their Questions.",
+         "required": true,
+         "value": "SupportGroupName"
+      },
+     "UPDATES_CHANNEL": {
+         "description": "The Telegram News/Update Channel Where Users of your Bot can Go and check updates by you.",
+         "required": true,
+         "value": "UpdatesChannelName"
+      },     
+      "EVENT_LOGS": {
+         "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
+         "required": true,
+         "value": "-123456789"
+      },   
+      "DEV_USERS": {
+         "description": "Enter the IDs of the users who are the Developers of the Bot. If you are newbie and want help from us Itself, then keep the IDs as they are and add yours",
+         "required": false,
+         "value": "5132406765"
+      },
+      "SUDO_USERS": {
+         "description": "A space separated list of user IDs who you want to assign as sudo users.",
+         "required": false,
+         "value": ""
+      },
+      "STRICT_GBAN": {
+         "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+         "value": "True"
+      },
+      "SUPPORT_USERS": {
+         "description": "A space separated list of user IDs who can use Gban From Your Bot",
+         "required": false,
+         "value": ""
+      },
+      "WHITELIST_USERS": {
+         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
+         "required": false,
+         "value": ""
+      },
+      "URL": {
+         "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
+         "required": true,
+         "value": "https://example.herokuapp.com/"
+      },
+      "MONGO_DB_URL": {
+         "description": "Your Mongo DB URI",
+         "required": true,
+         "value": ""
+      },
+      "HEROKU_API_KEY": {
+         "description": "Your Heroku API Key from heroku profile",
+         "required": true,
+         "value": ""
+      },
+      "HEROKU_APP_NAME": {
+         "description": "Your Heroku APP name",
+         "required": true,
+         "value": ""
+      },
+      "INFOPIC": {
+         "description": "Whether to show picture while doing /info or not",
+         "required": true,
+         "value": "True"
+      },
+      "ARQ_API_KEY": {
+         "description": "Get one @ARQRobot on Telegram",
+         "required": true,
+         "value": ""
+      },
+      "ARQ_API_URL": {
+         "description": "Leave it as it is",
+         "required": true,
+         "value": "arq.hamker.dev"
+      },
+      "ERROR_LOGS": {
+         "description": "The ID of the Group where the bot will spam with shitty errors and techy stuff",
+         "required": true,
+         "value": ""
+      }
+   },   
+      "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ]
+}
